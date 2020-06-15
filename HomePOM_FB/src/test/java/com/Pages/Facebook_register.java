@@ -35,6 +35,9 @@ public class Facebook_register extends Library {
 	@FindBy(xpath="//*[@id=\"u_0_y\"]/div[1]")
 	WebElement radiobutton;
 	
+	@FindBy(xpath="//*[@id=\"u_0_13\"]")
+	WebElement submitbutton;
+	
 	
 	
 	
@@ -83,17 +86,24 @@ public void pwd(String pass) {
 public void dob(String locator,String value) {
 	
 	
+	
 	  Select drop= new Select(driver.findElement(By.xpath(locator)));
 	  drop.selectByValue(value);
 }
  public void sex(String value) {
 	 
+	 
+	
 	 radiobutton = driver.findElement(By.id(value));
 	 radiobutton.click();
 	 
 	 
  }
 
+public void signup() {
+	
+	submitbutton.click();
+}
 
 
 

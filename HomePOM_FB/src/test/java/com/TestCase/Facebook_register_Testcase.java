@@ -43,6 +43,9 @@ public class Facebook_register_Testcase extends Library  {
 		register.dob("//*[@id='year']", "1996");
 		
 		register.sex("u_0_6");
+		
+		register.signup();
+		
 
 	}
 
