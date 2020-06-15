@@ -29,8 +29,11 @@ public class Facebook_register extends Library {
 	@FindBy(name="reg_passwd__")
 	WebElement password;
 	
-	@FindBy(xpath="//*[@id='day']")
-	WebElement day;
+	@FindBy(xpath="//*[@id=\"birthday_wrapper\"]/div[1]")
+	WebElement drop;
+	
+	@FindBy(xpath="//*[@id=\"u_0_y\"]/div[1]")
+	WebElement radiobutton;
 	
 	
 	
@@ -77,11 +80,19 @@ public void pwd(String pass) {
 
 
 
-public void dob(String locator, String value) {
+public void dob(String locator,String value) {
 	
-	 Select drop= new Select(driver.findElement(By.xpath(locator)));
+	
+	  Select drop= new Select(driver.findElement(By.xpath(locator)));
 	  drop.selectByValue(value);
 }
+ public void sex(String value) {
+	 
+	 radiobutton = driver.findElement(By.id(value));
+	 radiobutton.click();
+	 
+	 
+ }
 
 
 

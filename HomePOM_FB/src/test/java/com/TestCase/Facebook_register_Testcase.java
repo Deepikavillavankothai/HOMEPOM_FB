@@ -35,7 +35,13 @@ public class Facebook_register_Testcase extends Library  {
 
 		register.pwd("asd");
 		
-		register.dob("day", "10");
+		register.dob("//*[@id='day']", "10");
+		
+		register.dob("//*[@id='month']", "4");
+		
+		register.dob("//*[@id='year']", "1996");
+		
+		register.sex("u_0_6");
 
 	}
 
