@@ -20,10 +20,10 @@ public class Facebook_login extends Library {
 	
 	
 	public Facebook_login(WebDriver driver) {
+		
 		this.driver = driver;
+		
 		PageFactory.initElements(driver, this);
-		
-		
 		
 	}
 	

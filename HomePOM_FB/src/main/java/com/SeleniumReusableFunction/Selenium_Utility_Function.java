@@ -33,6 +33,16 @@ public class Selenium_Utility_Function extends Library {
 		File source=ts.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(source,new File(path));
 	}
+	
+	
+	 public void radiobutton(String value) {
+		 
+		 
+			
+		 driver.findElement(By.id(value)).click();
+		 
+	 }
+		 
 			  
 	public void getTitle() {
 		System.out.println(driver.getTitle());
