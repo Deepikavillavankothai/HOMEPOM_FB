@@ -24,6 +24,7 @@ public class Facebook_register_Testcase extends Library  {
 	@BeforeClass
 
 	public void startapp() {
+		
 
 		launchApplication("chrome","https://www.facebook.com/");
 	}
