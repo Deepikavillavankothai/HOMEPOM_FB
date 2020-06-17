@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
-
 import com.Baseclass.Library;
 
 
@@ -33,7 +31,7 @@ public class Facebook_register extends Library {
 	WebElement drop;
 	
 	@FindBy(xpath="//*[@id=\"u_0_y\"]/div[1]")
-	WebElement radiobutton;
+	WebElement rdbutton;
 	
 	@FindBy(xpath="//*[@id=\"u_0_13\"]")
 	WebElement submitbutton;
@@ -83,19 +81,19 @@ public void pwd(String pass) {
 
 
 
-public void dob(String locator,String value) {
-	
-	
-	
-	  Select drop= new Select(driver.findElement(By.xpath(locator)));
-	  drop.selectByValue(value);
-}
- public void sex(String value) {
+//public void dob(String locator,String value) {
+//	
+//	
+//	
+//	  Select drop= new Select(driver.findElement(By.xpath(locator)));
+//	  drop.selectByValue(value);
+//}
+ public void radiobutton(String value) {
 	 
 	 
 	
-	 radiobutton = driver.findElement(By.id(value));
-	 radiobutton.click();
+	 rdbutton = driver.findElement(By.id(value));
+	 rdbutton.click();
 	 
 	 
  }
@@ -104,6 +102,14 @@ public void signup() {
 	
 	submitbutton.click();
 }
+
+
+//public void radiobutton(String value) {
+//	
+//	 rdbutton = driver.findElement(By.id(value));
+//	 rdbutton.click();
+//	 
+//}
 
 
 
